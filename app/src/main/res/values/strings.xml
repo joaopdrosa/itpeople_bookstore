@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">ItPeople_BookStore</string>
+    <string name="app_name">ItPeople BookStore</string>
+    <string name="search">Search</string>
 </resources>
