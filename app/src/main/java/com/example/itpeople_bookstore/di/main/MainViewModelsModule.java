@@ -2,7 +2,7 @@ package com.example.itpeople_bookstore.di.main;
 
 import androidx.lifecycle.ViewModel;
 
-import com.example.itpeople_bookstore.activities.main.MainActivityViewModel;
+import com.example.itpeople_bookstore.ui.activities.main.MainActivityViewModel;
 import com.example.itpeople_bookstore.di.ViewModelKey;
 
 import dagger.Binds;
@@ -16,4 +16,6 @@ public abstract class MainViewModelsModule {
     @IntoMap
     @ViewModelKey(value = MainActivityViewModel.class)
     abstract ViewModel bindMainActivityViewModel(MainActivityViewModel viewModel);
+
+
 }

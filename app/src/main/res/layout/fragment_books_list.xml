@@ -4,10 +4,6 @@
 
     <data>
 
-<!--        <variable-->
-<!--            name="vm"-->
-<!--            type="com.example.itpeople_bookstore.fragments.books.list.BooksListViewModel" />-->
-
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,12 +19,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:autofillHints="@string/search" />
-        <!--            android:text="@={vm.search}"-->
-
-
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/people_list"
+            android:id="@+id/books_list"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="10dp"

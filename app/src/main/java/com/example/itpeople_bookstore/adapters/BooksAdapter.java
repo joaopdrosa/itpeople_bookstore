@@ -12,18 +12,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.itpeople_bookstore.Callable;
 import com.example.itpeople_bookstore.R;
 import com.example.itpeople_bookstore.data.models.Book;
+import com.example.itpeople_bookstore.data.models.BookAndInfo;
 
 import java.util.List;
 
 public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BookViewHolder> {
 
-    private List<Book> books;
-    private final Callable<Book> callable;
+    private List<BookAndInfo> books;
+    private final Callable<BookAndInfo> callable;
 
-
-    public BooksAdapter(Callable<Book> callable) {
+    public BooksAdapter(Callable<BookAndInfo> callable) {
         super();
         this.callable = callable;
+    }
+
+    public void setBooks(List<BookAndInfo> books) {
+        this.books = books;
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -42,6 +47,10 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BookViewHold
 
     @Override
     public int getItemCount() {
+        if (books == null) {
+            return 0;
+        }
+
         return books.size();
     }
 
@@ -52,8 +61,8 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BookViewHold
         }
 
         @SuppressLint("SetTextI18n")
-        public void bind(Book book, Callable<Book> callable) {
-//            itemView.uniqueId_label.text = person.uniqueIdLabel
+        public void bind(BookAndInfo book, Callable<BookAndInfo> callable) {
+//            itemView.title_text_view.text = person.uniqueIdLabel
 //            itemView.uniqueId_text_view.text = person.uniqueId
 //            itemView.occupational_uniqueId_label.text = person.occupationalUniqueIdLabel
 //            itemView.occupational_uniqueId_view.text = person.occupationalUniqueId

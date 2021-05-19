@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">ItPeople BookStore</string>
     <string name="search">Search</string>
+    <string name="book_details">Book Details</string>
+    <string name="buy_book">Buy</string>
 </resources>

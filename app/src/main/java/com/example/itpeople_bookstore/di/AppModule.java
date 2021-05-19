@@ -29,4 +29,5 @@ public class AppModule {
     static AppDatabase provideDatabase(Application app) {
         return AppDatabase.getInstance(app);
     }
+
 }

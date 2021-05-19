@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.itpeople_bookstore"
-        minSdkVersion 22
+        minSdkVersion 25
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -41,24 +41,21 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-
-    implementation 'com.google.dagger:dagger-android:2.35.1'
-    implementation ('com.google.dagger:dagger-android-support:2.24') {
-        exclude group: 'com.android.support', module: 'support-media-compat'
-        exclude group: 'com.android.support', module: 'support-compat'
-    }
-
-    annotationProcessor 'com.google.dagger:dagger-android-processor:2.24'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.24'
-    implementation 'com.google.dagger:dagger:2.35.1'
+    implementation "com.google.dagger:dagger:2.35.1"
+    implementation "com.google.dagger:dagger-android-support:2.30.1"
+    annotationProcessor "com.google.dagger:dagger-android-processor:2.30.1"
+    annotationProcessor "com.google.dagger:dagger-compiler:2.30.1"
     compileOnly 'com.squareup.inject:assisted-inject-annotations-dagger2:0.5.2'
     annotationProcessor 'com.squareup.inject:assisted-inject-processor-dagger2:0.5.2'
 
     implementation 'com.squareup.retrofit2:retrofit:2.6.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.2'
+    implementation "com.google.code.gson:gson:2.8.6"
 
     implementation "androidx.room:room-runtime:2.3.0"
+    implementation "androidx.room:room-rxjava2:2.3.0"
+    annotationProcessor "androidx.room:room-compiler:2.3.0"
 
     implementation "androidx.navigation:navigation-fragment:2.3.5"
     implementation "androidx.navigation:navigation-ui:2.3.5"

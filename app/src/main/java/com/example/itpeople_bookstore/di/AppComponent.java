@@ -3,6 +3,8 @@ package com.example.itpeople_bookstore.di;
 import android.app.Application;
 
 
+import com.example.itpeople_bookstore.di.books.BookModule;
+
 import javax.inject.Singleton;
 
 import dagger.BindsInstance;
@@ -15,8 +17,9 @@ import dagger.android.support.AndroidSupportInjectionModule;
         AndroidSupportInjectionModule.class,
         AppModule.class,
         ActivityBuildersModule.class,
-//        FragmentBuildersModule.class,
+        FragmentBuildersModule.class,
         ViewModelFactoryModule.class,
+        BookModule.class
 })
 public interface AppComponent extends AndroidInjector<BaseApplication> {
 

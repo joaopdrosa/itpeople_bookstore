@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.main.MainActivity">
+    tools:context=".ui.activities.main.MainActivity">
 
     <include
         android:id="@+id/toolbar"
@@ -16,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <fragment
+        android:layout_margin="16dp"
         android:id="@+id/holdings_nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"

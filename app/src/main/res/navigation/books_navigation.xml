@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/booksListFragment"
-        android:name="com.example.itpeople_bookstore.fragments.books.list.BooksListFragment"
+        android:name="com.example.itpeople_bookstore.ui.fragments.books.list.BooksListFragment"
         android:label="BooksListFragment">
         <action
             android:id="@+id/action_booksListFragment_to_bookDetailsFragment"
@@ -18,9 +18,10 @@
             app:popExitAnim="@anim/slide_out_right"
             tools:layout="@layout/fragment_books_list" />
     </fragment>
+
     <fragment
         android:id="@+id/bookDetailsFragment"
-        android:name="com.example.itpeople_bookstore.fragments.books.details.BookDetailsFragment"
+        android:name="com.example.itpeople_bookstore.ui.fragments.books.details.BookDetailsFragment"
         android:label="fragment_book_details"
         tools:layout="@layout/fragment_book_details" />
 </navigation>

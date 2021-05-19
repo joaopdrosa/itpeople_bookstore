@@ -12,13 +12,12 @@ import retrofit2.Retrofit;
 public class BookModule {
 
     @Provides
-    public BookAPI provideBookApi(Retrofit retrofit) {
+    public static BookAPI provideBookApi(Retrofit retrofit) {
         return retrofit.create(BookAPI.class);
     }
 
-
     @Provides
-    public BookRepository provideBookRepository(AppDatabase db, BookAPI bookAPI) {
+    public static BookRepository provideBookRepository(AppDatabase db, BookAPI bookAPI) {
         return new BookRepository(db, bookAPI);
     }
 }

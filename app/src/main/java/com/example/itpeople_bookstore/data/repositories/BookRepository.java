@@ -9,11 +9,13 @@ import javax.inject.Inject;
 public class BookRepository {
 
     private BookDAO dao;
-    private BookAPI api;
+
+    public BookAPI api;
 
     @Inject
     public BookRepository(AppDatabase db, BookAPI api) {
         dao = db.bookDAO();
+        this.api = api;
     }
 
 
